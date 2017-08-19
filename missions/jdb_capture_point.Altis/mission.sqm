@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9465.6045,214.35753,15892.124};
-		dir[]={0.033859149,-0.7441777,0.66712403};
-		up[]={0.037721377,0.66798145,0.74322122};
-		aside[]={0.99871552,-1.207809e-009,-0.050688691};
+		pos[]={9465.9492,220.77985,15886.469};
+		dir[]={0.062823296,-0.74837136,0.66029948};
+		up[]={0.070882678,0.66327989,0.74500686};
+		aside[]={0.99550539,7.21775e-009,-0.094716012};
 	};
 };
 binarizationWanted=0;
@@ -86,7 +86,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=6;
+		items=5;
 		class Item0
 		{
 			dataType="Group";
@@ -286,25 +286,11 @@ class Mission
 			{
 				position[]={9448.8486,110.83774,15983.494};
 			};
-			name="bluforHeadlessClient";
+			name="HC";
 			isPlayable=1;
-			description="Blufor Headless Client";
+			description="HC";
 			id=39;
 			type="HeadlessClient_F";
-		};
-		class Item5
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={9443.3115,111.19305,15979.821};
-			};
-			name="opforHeadlessClient";
-			isPlayable=1;
-			description="Opfor Headless Client";
-			id=40;
-			type="HeadlessClient_F";
-			atlOffset=-0.050003052;
 		};
 	};
 };
