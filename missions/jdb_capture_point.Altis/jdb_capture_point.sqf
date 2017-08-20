@@ -1,12 +1,18 @@
 [] spawn {
-    _cpName = "cp";
+    if (!isServer) exitWith {};
+
+    /* Start Config Options */
+    // TODO Make this into an array and loop over it in the while true loop. One element per capture point.
+    _cpName = "cp_agios_dionysios";
     _cpDisplayName = "Agios Dionysios";
-    _numUnitsRequired = 4;
     _runIntervalSeconds = 5;
     _cpName setMarkerColor "colorCivilian";
-
     _cpRadius = (getMarkerSize _cpName) select 0;
     _cpLoc = getMarkerPos _cpName;
+
+    _percentageRequiredToCap = 70;
+    _percentageToBeSeen = 30;
+    /* End Config Options */
 
     while {true} do {
         sleep _runIntervalSeconds;
@@ -26,21 +32,29 @@
             };
         } forEach _allCaptors;
 
+        _totalCount = _bluforCaptorsCount + _opforCaptorsCount;
         _cpColor = getMarkerColor _cpName;
-        if (_bluforCaptorsCount >= _numUnitsRequired && _opforCaptorsCount >= _numUnitsRequired) then {
-            _cpColor = "ColorUNKNOWN";
-            hint format ["Battle started at %1", _cpDisplayName];
-        } else {
-            if (_bluforCaptorsCount > _numUnitsRequired) then {
-                _cpColor = "ColorWEST";
-                hint format ["Blufor captured %1", _cpDisplayName];
-            };
 
-            if (_opforCaptorsCount > _numUnitsRequired) then {
-                _cpColor = "ColorEAST";
-                hint format ["Opfor captured %1", _cpDisplayName];
-            };
+        _bluforPercentage = _bluforCaptorsCount / _totalCount;
+        _bluforAbleToCap = _bluforPercentage >= _percentageRequiredToCap;
+        if (_bluforAbleToCap) then {
+            _cpColor = "ColorWEST";
         };
+
+        _opforPercentage = _opforCaptorsCount / _totalCount;
+        _opforAbleToCap = _opforPercentage >= _percentageRequiredToCap;
+        if (_opforAbleToCap) then {
+            _cpColor = "ColorEAST";
+        };
+
+        _eitherAbleToCap = _bluforAbleToCap || _opforAbleToCap;
+        _bluforSeen = _bluforPercentage >= _percentageToBeSeen;
+        _opforSeen = _opforPercentage >= _percentageToBeSeen;
+        _battleInProgress = !_eitherAbleToCap && _bluforSeen && _opforSeen;
+        if (_battleInProgress) then {
+            _cpColor = "ColorUNKNOWN";
+        };
+
         _cpName setMarkerColor _cpColor;
     };
 };

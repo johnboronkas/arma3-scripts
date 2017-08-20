@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9527.9414,743.66711,14984.761};
-		dir[]={0.052960522,-0.51326197,0.8566066};
-		up[]={0.031672347,0.8582294,0.51228911};
-		aside[]={0.99810326,1.4119723e-007,-0.06170854};
+		pos[]={9463.9111,402.82248,15544.239};
+		dir[]={-0.2190495,-0.63355678,0.74205554};
+		up[]={-0.17937128,0.77369267,0.60763979};
+		aside[]={0.95909649,1.0395888e-007,0.2831189};
 	};
 };
 binarizationWanted=0;
@@ -141,7 +141,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=9;
+		items=8;
 		class Item0
 		{
 			dataType="Group";
@@ -228,6 +228,7 @@ class Mission
 			};
 			id=35;
 			type="ModuleCurator_F";
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -312,30 +313,16 @@ class Mission
 		class Item2
 		{
 			dataType="Marker";
-			position[]={9348.6348,-1.6025391,15893.578};
-			name="cp";
+			position[]={9348.6348,0,15893.578};
+			name="cp_agios_dionysios";
 			markerType="ELLIPSE";
 			type="ellipse";
 			a=150;
 			b=150;
 			id=36;
-			atlOffset=-121.22527;
+			atlOffset=-119.62273;
 		};
 		class Item3
-		{
-			dataType="Trigger";
-			position[]={9384.042,133.66171,15767.604};
-			class Attributes
-			{
-				condition="true";
-				onActivation="_handle = execVM ""jdb_capture_point.sqf"";";
-				sizeA=0;
-				sizeB=0;
-			};
-			id=38;
-			type="EmptyDetector";
-		};
-		class Item4
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -350,7 +337,7 @@ class Mission
 			type="HeadlessClient_F";
 			atlOffset=7.6293945e-006;
 		};
-		class Item5
+		class Item4
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -364,7 +351,7 @@ class Mission
 			id=41;
 			type="HeadlessClient_F";
 		};
-		class Item6
+		class Item5
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -379,7 +366,7 @@ class Mission
 			type="HeadlessClient_F";
 			atlOffset=-7.6293945e-006;
 		};
-		class Item7
+		class Item6
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -470,7 +457,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item8
+		class Item7
 		{
 			dataType="Group";
 			side="East";
