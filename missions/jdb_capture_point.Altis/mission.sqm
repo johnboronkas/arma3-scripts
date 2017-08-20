@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=41;
+		nextID=42;
 	};
 	class MarkerIDProvider
 	{
@@ -86,7 +86,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5;
+		items=6;
 		class Item0
 		{
 			dataType="Group";
@@ -286,11 +286,25 @@ class Mission
 			{
 				position[]={9448.8486,110.83774,15983.494};
 			};
+			name="HC_blufor";
+			isPlayable=1;
+			description="HC_BLUFOR";
+			id=39;
+			type="HeadlessClient_F";
+		};
+		class Item5
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9445.4697,112.09424,15971.118};
+			};
 			name="HC";
 			isPlayable=1;
 			description="HC";
-			id=39;
+			id=41;
 			type="HeadlessClient_F";
+			atlOffset=-0.058998108;
 		};
 	};
 };

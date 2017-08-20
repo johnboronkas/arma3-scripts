@@ -1,4 +1,11 @@
 # arma3-scripts
 Task Manager -> details..
-Set processor priority to high for game, server, and headless client.
-Set game affinity to have 50% of the CPUs, server and headless each get 25%.
+
+```
+Set all to high.
+
+Client - 4 cores
+Server - 1 core
+HC_BLUFOR - 1 core
+HC - 2 cores
+```
