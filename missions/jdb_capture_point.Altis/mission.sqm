@@ -17,9 +17,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={9527.9414,743.66711,14984.761};
-		dir[]={0.02898033,-0.47998866,0.87680566};
-		up[]={0.015855772,0.87727219,0.47973233};
-		aside[]={0.99946326,1.481967e-007,-0.033034265};
+		dir[]={0.052960522,-0.51326197,0.8566066};
+		up[]={0.031672347,0.8582294,0.51228911};
+		aside[]={0.99810326,1.4119723e-007,-0.06170854};
 	};
 };
 binarizationWanted=0;
@@ -61,12 +61,67 @@ randomSeed=16535217;
 class ScenarioData
 {
 	author="reth";
+	forceRotorLibSimulation=1;
+	aIKills=1;
+	class Header
+	{
+		gameType="Zeus";
+		minPlayers=2;
+		maxPlayers=5;
+	};
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="None";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
+	appId=275700;
 	assetType="Free";
 	class Intel
 	{
+		briefingName="JDB Capture Point";
+		overviewText="Take control of capture points to increase your production.";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
@@ -169,11 +224,10 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10223.067,121.66199,15902.063};
-				angles[]={6.2818484,0,6.2818484};
+				angles[]={6.2818413,0,6.2818413};
 			};
 			id=35;
 			type="ModuleCurator_F";
-			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -330,12 +384,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8478.4941,101.33616,15577.813};
-				angles[]={6.2671871,0,0.034652505};
+				position[]={8478.4941,101.33618,15577.813};
+				angles[]={6.2671809,0,0.034644786};
 			};
 			id=45;
 			type="ModuleCurator_F";
-			atlOffset=-2.2888184e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -442,6 +495,7 @@ class Mission
 					};
 					id=47;
 					type="O_officer_F";
+					atlOffset=7.6293945e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -490,6 +544,7 @@ class Mission
 			{
 			};
 			id=46;
+			atlOffset=7.6293945e-006;
 		};
 	};
 };
