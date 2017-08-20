@@ -99,7 +99,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10213.594,121.76206,15909.898};
+						position[]={10213.594,121.76244,15909.898};
 					};
 					side="West";
 					flags=7;
@@ -112,6 +112,7 @@ class Mission
 					};
 					id=12;
 					type="B_officer_F";
+					atlOffset=0.00038146973;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -160,6 +161,7 @@ class Mission
 			{
 			};
 			id=11;
+			atlOffset=0.00038146973;
 		};
 		class Item1
 		{
@@ -171,6 +173,7 @@ class Mission
 			};
 			id=35;
 			type="ModuleCurator_F";
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -283,14 +286,15 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={10365.827,99.008789,15929.912};
-				angles[]={0.14301692,0,6.1821966};
+				position[]={10365.827,99.008797,15929.912};
+				angles[]={0.14301229,0,6.1822004};
 			};
-			name="HC_blufor";
+			name="HC_BLUFOR";
 			isPlayable=1;
 			description="HC_BLUFOR";
 			id=39;
 			type="HeadlessClient_F";
+			atlOffset=7.6293945e-006;
 		};
 		class Item5
 		{
@@ -298,7 +302,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10471.331,98.205376,15780.967};
-				angles[]={0.12599505,0,6.1545658};
+				angles[]={0.12599531,0,6.154572};
 			};
 			name="HC";
 			isPlayable=1;
@@ -311,14 +315,15 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8299.21,92.248116,15650.64};
-				angles[]={6.247201,0,6.272521};
+				position[]={8299.21,92.248108,15650.64};
+				angles[]={6.2471962,0,6.2725215};
 			};
 			name="HC_OPFOR";
 			isPlayable=1;
 			description="HC_OPFOR";
 			id=42;
 			type="HeadlessClient_F";
+			atlOffset=-7.6293945e-006;
 		};
 		class Item7
 		{
@@ -330,6 +335,7 @@ class Mission
 			};
 			id=45;
 			type="ModuleCurator_F";
+			atlOffset=-2.2888184e-005;
 			class CustomAttributes
 			{
 				class Attribute0
