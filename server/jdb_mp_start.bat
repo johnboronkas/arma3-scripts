@@ -1,1 +1,1 @@
-start arma3server.exe -profiles=jd_profiles -port=2302 -config=jdb_mp.cfg
+start arma3server.exe -profiles=jd_server_profiles -name=jdb_mp_server -port=2302 -config=jdb_mp.cfg
