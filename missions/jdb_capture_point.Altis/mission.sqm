@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=48;
+		nextID=49;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9463.9111,402.82248,15544.239};
-		dir[]={-0.2190495,-0.63355678,0.74205554};
-		up[]={-0.17937128,0.77369267,0.60763979};
-		aside[]={0.95909649,1.0395888e-007,0.2831189};
+		pos[]={9527.9512,229.76875,15008.56};
+		dir[]={0.30824614,-0.75083166,0.58415872};
+		up[]={0.35040438,0.66049284,0.66405249};
+		aside[]={0.88442451,9.6159056e-008,-0.46668941};
 	};
 };
 binarizationWanted=0;
@@ -141,7 +141,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			dataType="Group";
@@ -317,6 +317,7 @@ class Mission
 			name="cp_agios_dionysios";
 			markerType="ELLIPSE";
 			type="ellipse";
+			colorName="ColorCIV";
 			a=150;
 			b=150;
 			id=36;
@@ -532,6 +533,19 @@ class Mission
 			};
 			id=46;
 			atlOffset=7.6293945e-006;
+		};
+		class Item8
+		{
+			dataType="Marker";
+			position[]={9530.5479,0,15059.448};
+			name="cp_factory";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorCIV";
+			a=100;
+			b=100;
+			id=48;
+			atlOffset=-124.22835;
 		};
 	};
 };
