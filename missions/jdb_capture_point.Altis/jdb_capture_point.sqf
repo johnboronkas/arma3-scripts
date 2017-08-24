@@ -14,8 +14,8 @@
     ];
 
     _runIntervalSeconds = 5;
-    _percentageRequiredToCap = 70;
-    _percentageToBeSeen = 30;
+    _percentageRequiredToCap = 0.70;
+    _percentageToBeSeen = 0.30;
     /* End Config Options */
 
     while {true} do {
