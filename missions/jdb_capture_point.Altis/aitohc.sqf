@@ -30,14 +30,9 @@ _HC = owner HC;
     
     {
         if (!isPlayer _x) then {
-            diag_log format ["current unit is %1", _x];
             if (!(_x in units group _HC_BLUFOR)) then {
-                diag_log format ["current unit not in blu!"];
                 if (!(_x in units group _HC_OPFOR)) then {
-                    diag_log format ["current unit not in op!"];
                     if (!(_x in units group _HC)) then {
-                        diag_log format ["current unit not in hc!"];
-
                         switch (side _x) do {
                             case west: { _x setOwner _HC_BLUFOR };
                             case east: { _x setOwner _HC_OPFOR };

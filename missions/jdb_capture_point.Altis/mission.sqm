@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=51;
+		nextID=65;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1;
+		nextID=6;
 	};
 	class Camera
 	{
-		pos[]={9527.9512,229.76875,15008.56};
-		dir[]={0.30824614,-0.75083166,0.58415872};
-		up[]={0.35040438,0.66049284,0.66405249};
-		aside[]={0.88442451,9.6159056e-008,-0.46668941};
+		pos[]={9469.6367,381.20084,15434.009};
+		dir[]={-0.29814708,-0.58826506,0.75172061};
+		up[]={-0.21688332,0.80866814,0.54682815};
+		aside[]={0.9295696,-4.3294858e-007,0.36868611};
 	};
 };
 binarizationWanted=0;
@@ -141,7 +141,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=9;
+		items=21;
 		class Item0
 		{
 			dataType="Group";
@@ -172,6 +172,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -189,7 +208,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -208,7 +227,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
 					};
 				};
 			};
@@ -313,15 +370,16 @@ class Mission
 		class Item2
 		{
 			dataType="Marker";
-			position[]={9348.6348,0,15893.578};
-			name="cp_agios_dionysios";
+			position[]={9564.0635,0,16015.654};
+			name="cp_agios_dionysios_east";
+			text="Agios Dionysios East";
 			markerType="ELLIPSE";
 			type="ellipse";
 			colorName="ColorCIV";
 			a=150;
 			b=150;
 			id=36;
-			atlOffset=-119.62273;
+			atlOffset=-103.86362;
 		};
 		class Item3
 		{
@@ -483,10 +541,28 @@ class Mission
 					};
 					id=47;
 					type="O_officer_F";
-					atlOffset=7.6293945e-006;
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -505,7 +581,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -524,7 +600,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
 					};
 				};
 			};
@@ -532,13 +646,13 @@ class Mission
 			{
 			};
 			id=46;
-			atlOffset=7.6293945e-006;
 		};
 		class Item8
 		{
 			dataType="Marker";
 			position[]={9530.5479,0,15059.448};
-			name="cp_factory";
+			name="cp_logging_factory";
+			text="Logging Factory";
 			markerType="ELLIPSE";
 			type="ellipse";
 			colorName="ColorCIV";
@@ -546,6 +660,144 @@ class Mission
 			b=100;
 			id=48;
 			atlOffset=-124.22835;
+		};
+		class Item9
+		{
+			dataType="Marker";
+			position[]={9114.5244,0,15795.98};
+			name="cp_agios_dionysios_west";
+			text="Agios Dionysios West";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorCIV";
+			a=150;
+			b=150;
+			id=51;
+			atlOffset=-117.33532;
+		};
+		class Item10
+		{
+			dataType="Marker";
+			position[]={9339.1875,-1.2573242,15908.821};
+			name="cp_agios_dionysios_center";
+			text="Agios Dionysios Center";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorCIV";
+			a=200;
+			b=200;
+			id=52;
+			atlOffset=-118.82706;
+		};
+		class Item11
+		{
+			dataType="Marker";
+			position[]={10249.284,0,14841.389};
+			name="cp_chemical_factory";
+			text="Chemical Factory";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorCIV";
+			a=100;
+			b=100;
+			id=53;
+			atlOffset=-95.26651;
+		};
+		class Item12
+		{
+			dataType="Marker";
+			position[]={10259.389,-13.579102,14857.7};
+			name="marker_chemical_factory";
+			text="Chemical Factory";
+			type="mil_flag";
+			id=54;
+			atlOffset=-108.74939;
+		};
+		class Item13
+		{
+			dataType="Marker";
+			position[]={9541.1904,0,15076.387};
+			name="marker_logging_factory";
+			text="Logging Factory";
+			type="mil_flag";
+			id=55;
+			atlOffset=-127.13297;
+		};
+		class Item14
+		{
+			dataType="Marker";
+			position[]={9577.9131,3.4396973,16038.576};
+			name="marker_agios_dionysios_east";
+			text="East";
+			type="mil_flag";
+			id=56;
+			atlOffset=-96.971031;
+		};
+		class Item15
+		{
+			dataType="Marker";
+			position[]={9127.9766,0,15818.815};
+			name="marker_agios_dionysios_west";
+			text="West";
+			type="mil_flag";
+			id=57;
+			atlOffset=-120.18872;
+		};
+		class Item16
+		{
+			dataType="Marker";
+			position[]={9354.6807,0,15932.166};
+			name="marker_agios_dionysios_center";
+			text="Center";
+			type="mil_flag";
+			id=58;
+			atlOffset=-115.35632;
+		};
+		class Item17
+		{
+			dataType="Marker";
+			position[]={10213.848,6.267334,15915.872};
+			name="fob_blufor";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorWEST";
+			fillName="FDiagonal";
+			a=200;
+			b=200;
+			id=59;
+			atlOffset=-115.37186;
+		};
+		class Item18
+		{
+			dataType="Marker";
+			position[]={8480.8486,0,15590.935};
+			name="fob_opfor";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorEAST";
+			fillName="FDiagonal";
+			a=200;
+			b=200;
+			id=60;
+			atlOffset=-101.22656;
+		};
+		class Item19
+		{
+			dataType="Marker";
+			position[]={10224.612,0,15901.382};
+			name="marker_blufor";
+			type="flag_NATO";
+			id=61;
+			atlOffset=-121.65903;
+		};
+		class Item20
+		{
+			dataType="Marker";
+			position[]={8479.7246,0,15589.06};
+			name="marker_opfor";
+			type="flag_CSAT";
+			id=62;
+			atlOffset=-101.24757;
 		};
 	};
 };

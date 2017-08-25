@@ -4,12 +4,24 @@
     /* Start Config Options */
     _capturePoints = [
         [
-            "cp_agios_dionysios", // CP Name
-            "Agios Dionysios" // CP Display name
+            "cp_agios_dionysios_west", // CP Name
+            "Agios Dionysios West" // CP Display name
         ],
         [
-            "cp_factory",
-            "Factory"
+            "cp_agios_dionysios_center",
+            "Agios Dionysios Center"
+        ],
+        [
+            "cp_agios_dionysios_east",
+            "Agios Dionysios East"
+        ],
+        [
+            "cp_logging_factory",
+            "the Logging Factory"
+        ],
+        [
+            "cp_chemical_factory",
+            "the Chemical Factory"
         ]
     ];
 
